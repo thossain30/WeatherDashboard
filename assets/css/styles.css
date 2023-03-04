@@ -1,0 +1,18 @@
+:root {
+    --header-text: rgb(3, 3, 120);
+    --body-background: rgb(171, 171, 217);
+    --header-background: rgb(163, 163, 250);
+}
+* {
+    font-family: 'Barlow', sans-serif;
+}
+header {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--header-text);
+    background-color: var(--header-background);
+}
+
+body {
+    background-color: var(--body-background);
+}
