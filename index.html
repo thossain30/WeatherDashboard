@@ -20,16 +20,30 @@
     <header class="container-fluid mt-2 p-3">
         <h1><strong>Weather Dashboard</strong></h1>
     </header>
-    <!-- Section for search bar of city -->
-    <section class="col-sm-4">
-        <h4 class="pt-1"><strong>Search for a City: </strong></h4>
-        <div class="input-group mb-3 pt-1">
-            <input type="text" class="form-control"id="searched-city" aria-label="City Search" aria-describedby="search-button">
-            <div class="input-group-append">
-                <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+    <!-- Div that will contain all of our elements -->
+    <div class="container-fluid">
+        <!-- Section for search bar of city -->
+        <section class="row">
+            <div class="col-sm-4">
+                <h4 class="pt-1"><strong>Search for a City: </strong></h4>
+                <div class="input-group mb-3 pt-1">
+                    <input type="text" class="form-control"id="searched-city" aria-label="City Search" aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!-- Where our search history will go -->
+                <button class="btn btn-primary" type="button" id="clear-history">Clear History</button>
+                <ul class="list-group">
+
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
+<!--jQuery JS-->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<!-- Script.js file -->
 <script src="./assets/js/script.js"></script>
 </html>
