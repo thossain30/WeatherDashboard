@@ -1,7 +1,8 @@
 :root {
     --header-text: rgb(3, 3, 120);
-    --body-background: rgb(171, 171, 217);
-    --header-background: rgb(163, 163, 250);
+    --body-background: rgb(149, 149, 203);
+    --header-background: rgb(142, 142, 248);
+    --current-weather-bg: rgb(193, 193, 245);
 }
 * {
     font-family: 'Barlow', sans-serif;
@@ -15,4 +16,25 @@ header {
 
 body {
     background-color: var(--body-background);
+    color: #27273d;
+}
+
+.curWeather {
+    background-color: var(--current-weather-bg);
+    border-radius: 10px;
+
+}
+
+.curWeather > * {
+    padding-bottom: 15px;
+    font-size: 24px;
+}
+
+.city-name {
+    font-size: 48px;
+    text-align: center;
+    background-color: var(--header-text);
+    color: var(--current-weather-bg);
+    border-radius: 10px;
+    padding-bottom: 10px;
 }
