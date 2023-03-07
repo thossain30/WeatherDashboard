@@ -1,8 +1,9 @@
 :root {
     --header-text: rgb(3, 3, 120);
-    --body-background: rgb(149, 149, 203);
-    --header-background: rgb(142, 142, 248);
-    --current-weather-bg: rgb(193, 193, 245);
+    --body-background: rgb(166, 166, 227);
+    --header-background: rgb(131, 192, 253);
+    --current-weather-bg: rgb(104, 104, 243);
+    --white-color: rgb(202, 227, 248);
 }
 * {
     font-family: 'Barlow', sans-serif;
@@ -19,22 +20,24 @@ body {
     color: #27273d;
 }
 
-.curWeather {
+.curWeather, .futWeather {
     background-color: var(--current-weather-bg);
+    color: var(--white-color);
     border-radius: 10px;
-
 }
 
-.curWeather > * {
+
+
+.curWeather > p {
     padding-bottom: 15px;
     font-size: 24px;
 }
 
 .city-name {
-    font-size: 48px;
+    font-size: 36px;
     text-align: center;
     background-color: var(--header-text);
-    color: var(--current-weather-bg);
+    color: var(--white-color);
+
     border-radius: 10px;
-    padding-bottom: 10px;
 }
