@@ -32,6 +32,7 @@ clearBtn.on("click", function(event) {
     clearHistory(event);
 });
 
+
 // searches the city to see if it exists in the entries from the storage
 function find(c){
     for (var i=0; i<history.length; i++){
@@ -110,6 +111,7 @@ function addToList(c){
     $(listEl).attr("class","list-group-item");
     $(listEl).attr("data-value",c.toUpperCase());
     $(".list-group").append(listEl);
+    console.log(listEl);
 }
 
 // Gets passed cities from storage
@@ -126,6 +128,16 @@ function loadlastCity(){
     }
 }
 
+// display the past search again when the list group item is clicked in search history
+function invokePastSearch(event){
+    var liEl=event.target;
+    if (event.target.matches("li")){
+        city=liEl.textContent.trim();
+        currentWeather(city);
+    }
+
+}
+
 //Clear the search history from the page
 function clearHistory(event){
     event.preventDefault();
@@ -133,3 +145,5 @@ function clearHistory(event){
     localStorage.removeItem("cityname");
     document.location.reload();
 }
+
+$(document).on("click",invokePastSearch);

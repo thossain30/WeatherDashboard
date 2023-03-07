@@ -20,6 +20,11 @@ li {
     color: var(--white-color);
     margin-bottom: 10px !important;
 }
+
+li:hover {
+    background-color: rgb(1, 1, 61) !important;
+    cursor: pointer;
+}
 body {
     background-color: var(--body-background);
     color: #27273d;
@@ -36,6 +41,10 @@ body {
 .curWeather > p {
     padding-bottom: 15px;
     font-size: 24px;
+}
+
+.futWeather > p {
+    font-size: 20px;
 }
 
 .city-name {
