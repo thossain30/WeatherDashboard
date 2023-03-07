@@ -51,7 +51,7 @@ function currentWeather(city) {
 // Function to handle displaying forecast for next 5 days
 function forecast(cityid) {
     let dayOver = false;
-    let forecastURL = `api.openweathermap.org/data/2.5/forecast?id=${cityid}&APPID=${APIKey}`
+    let forecastURL = `http://api.openweathermap.org/data/2.5/forecast?id=${cityid}&units=imperial&APPID=${APIKey}`
     fetch(forecastURL).
         then(function(response) {
             return response.json();
@@ -67,8 +67,8 @@ function forecast(cityid) {
             
                 $("#futDate"+i).html(date);
                 $("#futImg"+i).html("<img src="+iconurl+">");
-                $("#futTemp"+i).html(temp+"&#8457");
-                $("#futHumidity"+i).html(humidity+"%");
+                $("#futTemp"+i).html(" " + temp + " °F");
+                $("#futHumidity"+i).html(" " + humidity+" %");
             }
         })
 }
