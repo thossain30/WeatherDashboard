@@ -15,6 +15,11 @@ header {
     background-color: var(--header-background);
 }
 
+li {
+    background-color: var(--header-text) !important;
+    color: var(--white-color);
+    margin-bottom: 10px !important;
+}
 body {
     background-color: var(--body-background);
     color: #27273d;
@@ -40,4 +45,10 @@ body {
     color: var(--white-color);
 
     border-radius: 10px;
+}
+
+.list-group {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 20px;
 }
