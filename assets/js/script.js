@@ -111,7 +111,6 @@ function addToList(c){
     let listEl= $("<li>"+c.toUpperCase()+"</li>");
     $(listEl).attr("class","list-group-item");
     $(".list-group").append(listEl);
-    console.log(listEl);
 }
 
 // Gets passed cities from storage
