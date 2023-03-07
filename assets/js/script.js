@@ -90,26 +90,26 @@ function forecast(cityid) {
             return response.json();
         }).then(function(data) {
             for (i=0;i<5;i++){
-                // var date= new Date((response.list[((i+1)*8)-1].dt)*1000).toLocaleDateString();
                 let date = dayjs((data.list[((i+1)*8)-1].dt)*1000).format("MM/DD/YYYY");
-                var iconcode= data.list[((i+1)*8)-1].weather[0].icon;
-                var iconurl="https://openweathermap.org/img/wn/"+iconcode+".png";
-                var temp= data.list[((i+1)*8)-1].main.temp;
-                var humidity= data.list[((i+1)*8)-1].main.humidity;
+                let iconcode= data.list[((i+1)*8)-1].weather[0].icon;
+                let iconurl="https://openweathermap.org/img/wn/"+iconcode+".png";
+                let temp= data.list[((i+1)*8)-1].main.temp;
+                let humidity= data.list[((i+1)*8)-1].main.humidity;
+                let windSpeed= data.list[((i+1)*8)-1].wind.speed;
             
                 $("#futDate"+i).html(date);
                 $("#futImg"+i).html("<img src="+iconurl+">");
                 $("#futTemp"+i).html(" " + temp + " °F");
-                $("#futHumidity"+i).html(" " + humidity+" %");
+                $("#futHumidity"+i).html(" " + humidity+"%");
+                $("#futWindspeed"+i).html(" " + windSpeed+" m/s");
             }
         })
 }
 
-//Add the passed city on the search history
+// Add the passed city on the search history
 function addToList(c){
     let listEl= $("<li>"+c.toUpperCase()+"</li>");
     $(listEl).attr("class","list-group-item");
-    $(listEl).attr("data-value",c.toUpperCase());
     $(".list-group").append(listEl);
     console.log(listEl);
 }
@@ -128,14 +128,13 @@ function loadlastCity(){
     }
 }
 
-// display the past search again when the list group item is clicked in search history
+// display the past search when the list group item is clicked in search history
 function invokePastSearch(event){
-    var liEl=event.target;
+    let liEl = event.target;
     if (event.target.matches("li")){
         city=liEl.textContent.trim();
         currentWeather(city);
     }
-
 }
 
 //Clear the search history from the page

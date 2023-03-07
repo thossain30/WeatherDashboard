@@ -3,7 +3,7 @@
     --body-background: rgb(166, 166, 227);
     --header-background: rgb(131, 192, 253);
     --current-weather-bg: rgb(104, 104, 243);
-    --white-color: rgb(202, 227, 248);
+    --white-color: rgb(234, 245, 255);
 }
 * {
     font-family: 'Barlow', sans-serif;
@@ -47,6 +47,10 @@ body {
     font-size: 20px;
 }
 
+.futDate {
+    font-size: 26px !important;
+}
+
 .city-name {
     font-size: 36px;
     text-align: center;
@@ -60,4 +64,8 @@ body {
     display: flex;
     flex-direction: column-reverse;
     padding-top: 20px;
+}
+
+.list-group-item {
+    border-radius: 10px 10px 10px 10px;
 }
