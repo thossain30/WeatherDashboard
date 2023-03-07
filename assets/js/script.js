@@ -48,7 +48,7 @@ function currentWeather(city) {
     let currentDay = dayjs().format("MM/DD/YYYY");
     // URL for a request
     "api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}"
-    let requestURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${APIKey}`;
+    let requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${APIKey}`;
     fetch(requestURL).
         then(function(response) {
             return(response.json());
@@ -84,7 +84,7 @@ function currentWeather(city) {
 // Function to handle displaying forecast for next 5 days
 function forecast(cityid) {
     let dayOver = false;
-    let forecastURL = `http://api.openweathermap.org/data/2.5/forecast?id=${cityid}&units=imperial&APPID=${APIKey}`
+    let forecastURL = `https://api.openweathermap.org/data/2.5/forecast?id=${cityid}&units=imperial&APPID=${APIKey}`
     fetch(forecastURL).
         then(function(response) {
             return response.json();
